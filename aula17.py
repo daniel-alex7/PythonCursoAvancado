@@ -1,6 +1,6 @@
 # if / elif / else
 
-condicao = False
+condicao = True
 
 if condicao:
     print('Este código é if')

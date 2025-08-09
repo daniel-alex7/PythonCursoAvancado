@@ -10,6 +10,9 @@ nome = 'Daniel'
 #print('D' in nome)  # True
 #print('d' in nome)  # False
 #print(10 * '-')
+
+#Invertendo resultado
+
 #print('D' not in nome)  # False
 #print('d' not in nome)  # True
 

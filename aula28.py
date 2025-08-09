@@ -18,13 +18,17 @@ Se a idade e noem forem digitados:
 nome = input("Digite seu nome: ")
 idade = input("Digite sua idade: ")
 
-print(f'Seu nome é {nome} e sua idade é {idade}')
-print(f'Seu nome invertido é {nome[::-1]}')
-print(f'Seu nome contém espaços? {" " in nome}')
-print(f'Seu nome tem {len(nome)} letras')
-print(f'A primeira letra do seu nome é {nome[0]}')
-print(f'A ultima letra do seu nome é {nome[-1]}')
 
-if nome == '' or idade == '':
-    print("Desculpe, você deixou campos vazios")
+if " " in nome or idade:
+    
+ print(f'Seu nome é {nome} e sua idade é {idade}')
+ print(f'Seu nome invertido é {nome[::-1]}')
+ print(f'Seu nome contém espaços? {" " in nome}')
+ print(f'Seu nome tem {len(nome)} letras')
+ print(f'A primeira letra do seu nome é {nome[0]}')
+ print(f'A ultima letra do seu nome é {nome[-1]}')
+else:
+    print("Desculpe, você deixou campos vazios")  
+
+
 
