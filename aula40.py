@@ -50,11 +50,12 @@ while True:
         print('Não deveria ter chegado aqui')
 
 
-    sair = input('Quer sair? [s]im:  ').lower().startswith()
+    sair = input('Quer sair? [s]im:  ').lower().startswith('s')
 
-    if sair is True:
+    if sair:
         print('SAINDO...')
         break
+    
 
 
 
