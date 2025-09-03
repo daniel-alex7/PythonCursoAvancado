@@ -14,6 +14,5 @@ lista = ['Maria', 'Helena', 'Luiz']
 
 
 for indice in range(len(lista)):
+    print(f'Os indices são: {indice} {lista[indice]}')
     
-    print('Os indices são: ',indice)
-    indice += 1
