@@ -10,21 +10,21 @@ import os
 
 lista = []
 
-while True:
+while True: #Quando for verdadeiro
     print('Selecione uma opção')
     opcao = input('[i]nserir [a]pagar [l]istar: ')
 
     if opcao == 'i':
-        os.system('cls')
+        os.system('cls') #limpa a tela
         valor = input('Valor: ')
-        lista.append(valor)
+        lista.append(valor) #append vai acrescentar o valor na lista
 
     elif opcao == 'a':
         indice_str = input('Escolha o índice para apagar: ')
 
         try:
-            indice = int(indice_str)
-            del lista[indice]
+            indice = int(indice_str) #converte o numero_letra em um número positivo
+            del lista[indice] #deleta o indice_numero_letra 
         except:
             print('Não foi possível apagar índice')
     elif opcao == 'l':
