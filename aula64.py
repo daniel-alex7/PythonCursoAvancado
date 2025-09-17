@@ -1,6 +1,8 @@
 import random
 import sys
 
+# Cria 100 CPF's aleatórios
+
 for _ in range(100):
     nove_digito = ''
     for i in range(9):
