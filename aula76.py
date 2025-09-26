@@ -24,3 +24,25 @@
 #     ]
 # }
 # pessoa = dict(nome='Luiz Otávio', sobrenome='Miranda')
+
+pessoa = {
+    'nome': 'Daniel',
+    'sobrenome': 'Alexandre',
+    'idade': 19,
+    'endereços': [
+         {'rua': 'tal tal', 'número': 123},
+         {'rua': 'outra rua', 'número': 321},
+     ]
+}
+
+# pessoa = dict(nome = 'Daniel Robson')
+
+# print(pessoa, type(pessoa))
+
+print(pessoa['nome'])
+print(pessoa['idade'])
+
+print()
+
+for chave in pessoa: 
+    print(chave, pessoa[chave])
