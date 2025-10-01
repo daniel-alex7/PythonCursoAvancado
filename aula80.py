@@ -26,19 +26,20 @@ lista_de_listas_de_inteiros = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
-def duplicado(lista):
-    vistos = set() #cria um conjunto de numeros vistos
-    for numero in lista: 
-        if numero in vistos:
-            return numero
-        vistos.add(numero)
-    return -1
+ 
+
+def encontra_primeiro_duplicado(lista_de_inteiros):
+    numero_checados = set()
+    primeiro_duplicado = -1
+
+    for numero in lista_de_inteiros:
+        if numero in numero_checados:
+            primeiro_duplicado = numero
+            break
+
+    numero_checados.add(numero)
+
+    return primeiro_duplicado
 
 for lista in lista_de_listas_de_inteiros:
-    print(lista, '->', duplicado(lista))
-
-
-
-
-
-
+    encontra_primeiro_duplicado(lista)
