@@ -26,6 +26,19 @@ lista_de_listas_de_inteiros = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
+def duplicado(lista):
+    vistos = set() #cria um conjunto de numeros vistos
+    for numero in lista: 
+        if numero in vistos:
+            return numero
+        vistos.add(numero)
+    return -1
+
+for lista in lista_de_listas_de_inteiros:
+    print(lista, '->', duplicado(lista))
+
+
+
 
 
 
