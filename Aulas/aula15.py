@@ -7,4 +7,4 @@ print(f'Seu nome é {nome}')
 nmr_1 = int(input('Digite um número: '))
 nmr_2 = int(input('Digite um número: '))
 
-print('A soma é {nmr_1 + nmr_2}')
+print(f'A soma é {nmr_1 + nmr_2}')
