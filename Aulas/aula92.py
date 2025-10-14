@@ -14,7 +14,7 @@ def gen3():
     
 def gen2(gen=None):
     print('Começou gen 2')
-    if gen is None:
+    if gen is not None:
       yield from gen
     yield 4
     yield 5
@@ -27,10 +27,12 @@ g3 = gen2()
 
 for numero in g1:
     print(numero)
-    
+print()
+
 for numero in g2:
     print(numero)
-    
+print()   
+
 for numero in g3:
     print(numero)
 print()
