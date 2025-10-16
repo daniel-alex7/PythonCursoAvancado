@@ -33,8 +33,10 @@ def ordena(item):
 # key é uma funçao, tem que ser definição de uma def e não uma função executada
 lista.sort(key=ordena)
 
+
 for item in lista:
     print(item)
+print()
 
 # Com labda
 lista = [
@@ -55,4 +57,5 @@ l1 = sorted(lista, key=lambda item: item['nome'] )
 
 
 exibir(l1)
+print()
 exibir(l2)

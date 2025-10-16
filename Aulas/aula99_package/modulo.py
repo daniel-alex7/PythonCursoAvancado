@@ -3,7 +3,7 @@
 #     'soma',
 # ]
 
-from aula99_package.modulo2 import fala_oi
+from aula99_package.modulo2 import qualquer_coisa
 
 variavel = 'Daniel'
 

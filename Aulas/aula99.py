@@ -16,7 +16,14 @@
 
 # Part 2 da aula
 
-from aula99_package.modulo import soma, fala_oi
+# from aula99_package.modulo import soma, fala_oi
 
+# print(__name__)
+# fala_oi()
+
+
+# Parte 3
+from aula99_package import soma, fala_oi
+
+print(soma(2,3))
 fala_oi()
-print(__name__)
