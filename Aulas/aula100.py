@@ -23,7 +23,7 @@ print(novos_produtos)
 print()
 
 novos_precos = [
-    {**produto, 'preco': produto['preco'] * 1.01}
+    {**produto, 'preco': round(produto['preco'] * 1.1, 2)}
     for produto in novos_produtos 
 ]
 
