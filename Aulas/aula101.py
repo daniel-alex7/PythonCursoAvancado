@@ -1,9 +1,4 @@
 # Exercíco - Adiando execução de funções
-
-
-# Closure(aula 74) - Função que retorna recebe outras funções
-
-#  podemos guarda o soma em algum lugar da memoria? 
 #  problema: quando chama a função soma, ela ja executa e não da tempo de passar o y
 
 def soma(x, y):
