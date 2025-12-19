@@ -1,29 +1,25 @@
-# Considerando duas lista de inteiros ou floats (listaA e listaB)
-# Some os valores nas listas retornando uma nova lista com os valores somados:
+# count iterator sem fim, muito similiar ao range, mas sem lugar para acabar
 
-#Se uma lista for maior que a outra, a soma só vai considerar o tamanho menor
+from itertools import count
 
-#Exemplo:
+c1 = count(5, 5) #so podemos passar o start e o step
+r1 = range(5, 20, 5)
 
-#lista_a = [1, 2, 3, 4, 5, 6, 7]
-#lista_b = [1, 2. 3, 4]
+print('c1', hasattr(c1, '__iter__'))
+print('c1', hasattr(c1, '__next__'))
+print('r1', hasattr(r1, '__iter__'))
+print('r1', hasattr(r1, '__next__'))
+print()
 
-#resultado;
-#lista_soma = [2, 4, 6, 8]
-
-
-
-lista_a = [1, 2, 3, 4, 5, 6, 7]
-lista_b = [1, 2, 3, 4]
-
-# lista_soma = []
-
-# for i in range(min(len(lista_a), len(lista_b))):
-#     lista_soma.append(lista_a[i] + lista_b[i])
+print('count')
+for i in c1:
+    if i >= 20:
+        break
+    print(i)
     
-
-lista_soma = [a + b for a, b in 
-              zip(lista_a, lista_b)
-              ]
     
-print(lista_soma)
+print()
+
+print('range')
+for i in r1:
+    print(i)
