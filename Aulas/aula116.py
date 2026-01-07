@@ -39,32 +39,92 @@
 
 # part 2
 
+# caminho_arquivo = 'aula116.txt'
+
+
+# with open(caminho_arquivo, 'w+') as arquivo:
+#     arquivo.write('Linha 1\n')
+#     arquivo.write('Linha 2\n')
+#     arquivo.writelines(
+#         ('Linha 3\n', 'Linha 4\n')
+#     )
+    
+#     arquivo.seek(0, 0)
+#     print(arquivo.read())
+#     print('Lendo')
+    
+#     arquivo.seek(0, 0)
+#     print(arquivo.readline())
+#     print(arquivo.readline().strip)
+    
+#     print('READLINES')
+#     for linha in arquivo.readlines():
+#         print(linha.strip())
+    
+    
+# with open(caminho_arquivo, 'r') as arquivo:
+#     print(arquivo.read())
+    
+
+
+
+
+
+# part 3
+
+# caminho_arquivo = 'aula116.txt'
+
+
+# with open(caminho_arquivo, 'w+') as arquivo:
+#     print(type(arquivo))
+#     arquivo.write('Linha 1\n')
+#     arquivo.write('Linha 2\n')
+#     arquivo.writelines(
+#         ('Linha 3\n', 'Linha 4\n')
+#     )
+    
+#     arquivo.seek(0, 0)
+#     print(arquivo.read())
+#     print('Lendo')
+    
+#     arquivo.seek(0, 0)
+#     print(arquivo.readline())
+#     print(arquivo.readline().strip)
+    
+#     print('READLINES')
+#     for linha in arquivo.readlines():
+#         print(linha.strip())
+    
+    
+# with open(caminho_arquivo, 'r') as arquivo:
+#     print(arquivo.read())
+    
+# caminho_arquivo = 'aula116.txt'
+
+# with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
+#     arquivo.write('Atenção\n')
+#     arquivo.write('Linha 1\n')
+#     arquivo.write('Linha 2\n')
+#     arquivo.writelines(
+#         ('Linha 3\n', 'Linha 4\n')
+#     )
+
+
+
+
+
+# part 4
+import os 
 
 caminho_arquivo = 'aula116.txt'
 
-
-with open(caminho_arquivo, 'w+') as arquivo:
+with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
+    arquivo.write('Atenção\n')
     arquivo.write('Linha 1\n')
     arquivo.write('Linha 2\n')
     arquivo.writelines(
         ('Linha 3\n', 'Linha 4\n')
     )
     
-    arquivo.seek(0, 0)
-    print(arquivo.read())
-    print('Lendo')
-    
-    arquivo.seek(0, 0)
-    print(arquivo.readline())
-    print(arquivo.readline().strip)
-    
-    print('READLINES')
-    for linha in arquivo.readlines():
-        print(linha.strip())
-    
-    
-with open(caminho_arquivo, 'r') as arquivo:
-    print(arquivo.read())
-    
-
-
+# os.unlink(caminho_arquivo)
+# os.rename(caminho_arquivo, 'aula116-2.txt')
