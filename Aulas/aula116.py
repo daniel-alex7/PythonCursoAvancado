@@ -19,6 +19,52 @@
 # json.dump = Gera um arquivo json
 # json.load
 
-caminho_arquivo = '\\Users\\Daniel Silva\\PythonCursoAvan-ado\\Aulas\\'
-caminho_arquivo += 'aula116.txt'
-print(caminho_arquivo)
+# part 1
+
+# caminho_arquivo = '\\Users\\Daniel Silva\\PythonCursoAvan-ado\\Aulas\\'
+# caminho_arquivo += 'aula116.txt'
+
+
+# # arquivo = open(caminho_arquivo, 'w') 
+# # #  
+# # arquivo.close() 
+
+# with open(caminho_arquivo, 'w') as arquivo:
+#     print('Olá mundo')
+#     print('Arquivo vai ser fechado')
+    
+    
+
+
+
+# part 2
+
+
+caminho_arquivo = 'aula116.txt'
+
+
+with open(caminho_arquivo, 'w+') as arquivo:
+    arquivo.write('Linha 1\n')
+    arquivo.write('Linha 2\n')
+    arquivo.writelines(
+        ('Linha 3\n', 'Linha 4\n')
+    )
+    
+    arquivo.seek(0, 0)
+    print(arquivo.read())
+    print('Lendo')
+    
+    arquivo.seek(0, 0)
+    print(arquivo.readline())
+    print(arquivo.readline().strip)
+    
+    print('READLINES')
+    for linha in arquivo.readlines():
+        print(linha.strip())
+    
+    
+with open(caminho_arquivo, 'r') as arquivo:
+    print(arquivo.read())
+    
+
+
