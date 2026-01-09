@@ -7,6 +7,7 @@ def adiciona_clientes(nome, lista=None): #Isso não é bom em fazer
     return lista
 
 
+
 # lista1 = []
 
 cliente1 = adiciona_clientes('Daniel')
