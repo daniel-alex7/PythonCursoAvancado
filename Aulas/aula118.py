@@ -1,6 +1,6 @@
 # Problemas de parâmetros mutáveis em funções Python
 
-def adiciona_clientes(nome, lista=None): #Isso não é bom em fazer 
+def adiciona_clientes(nome, lista=None): 
     if lista is None:
         lista = []
     lista.append(nome)
