@@ -16,7 +16,7 @@
     
 # soma(1, 3, x = 2, y = 5 )
 
-# asterico fala que um ou mais podem ser nominal
+# asterisco fala que um ou mais podem ser nominal
 def soma(a, b, *, c ):
     print(a + b + c)
     
