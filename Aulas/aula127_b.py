@@ -3,3 +3,5 @@
 # e depois crie novamente as instâncias
 # da classe com os dados salvos
 # Faça em arquivos separados.
+
+#  RECUPERANDO OS DADOS
