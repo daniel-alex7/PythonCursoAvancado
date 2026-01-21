@@ -15,23 +15,24 @@ class Pessoa:
             self.idade = idade
 
 
-p1 = Pessoa('Roberto', 21)
 
-# with open('aula127_a.json', 'r', encoding='utf8') as arquivo:
-#     print(arquivo.read())
-    
-    
+   
     
 
 with open('aula127_a.json', 'r', encoding='utf8') as arquivo:
-    pessoa = json.load(arquivo)
+    p1 = json.load(arquivo)
+    print(p1)
+
     
 with open('aula127_b.json', 'w', encoding='utf8') as arquivo:
-    json.load(arquivo)
-  
-  
+    p1 = Pessoa('Roberto', 21)
+
+    json.dump(
+            p1.__dict__, arquivo, indent=4,
+    )
     
-   
+    
+print(p1.nome, p1.idade)
     
     
     
