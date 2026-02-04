@@ -22,3 +22,6 @@ class Caneta:
         
 
 caneta = Caneta('Azul')
+
+# Atualizando o codigo um pouquinho
+# Nada demais
