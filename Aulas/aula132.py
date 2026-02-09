@@ -9,21 +9,47 @@
 
 class Caneta:
     def __init__(self, cor):
-        self.cor_tinta = cor
+        # private or protected 
+        self.cor = cor
+        self.cor_tampa = None
     
+    # obter valor
     @property
     def cor(self):
-        print('PROPERTY')
-        return self.cor_tinta
+        # print('PROPERTY')
+        print('ESTOU NO GETTER')
+        return self._cor 
     
+    
+    # configurar valor
+    @cor.setter
+    def cor(self, valor):
+        # print('ESTOU NO SETTER',valor)
+        print('ESTOU NO SETTER')
+        self._cor = valor
+        
+        # if valor == 'Rosa':
+        #     raise ValueError('Não aceito essa cor')
+        # self._cor = valor
+        
     @property
     def cor_tampa(self):
-        return 'tampa azul'
+        return self._cor_tampa
+    
+    
+    @cor_tampa.setter
+    def cor_tampa(self, valor):
+        self._cor_tampa = valor
+        
+    
+
         
 
 caneta = Caneta('Azul')
+caneta.cor = 'Rosa'
 
-# Atualizando o codigo um pouquinho
-# Nada demais
-# tESTE DE CONEXÃO COM GIT
-# TESTE 1
+# # getter -> obter valor
+print(caneta.cor)
+
+caneta.cor_tampa = 'Azul'
+print('tampa', caneta.cor_tampa)
