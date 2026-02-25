@@ -17,26 +17,53 @@
 
 class A:
     atributo_a = 'valor a'
+    
+    def __init__(self, atributo):
+        self.atributo = atributo
+    
     def metodo(self):
         print('A')
         
         
 class B(A):
     atributo_b = 'valor b '
+    
+    def __init__(self, atributo, outra_coisa):
+        super().__init__(atributo)
+        self.outra_coisa = outra_coisa
+    
     def metodo(self):
-        super().metodo()
         print('B')
         
         
 class C(B):
     atributo_c = 'valor c '
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # print('Burlamos o sistema')
+    
+    
     def metodo(self):
-        super(C, self).metodo()
+        # super().metodo()
+        # super(C, self).metodo()
+        # super(A, self).metodo() é igaul a.... proxima linha
+        A.metodo(self)
+        B.metodo(self)
         print('C')
         
         
-c = C()
-print(c.atributo_a)
-print(c.atributo_b)
-print(c.atributo_c)
-c.metodo()
+        
+# print(C.mro())     
+# print(B.mro())   
+# print(A.mro())
+  
+c = C('atributo', 'outra coisa')
+print(c.atributo)
+print(c.outra_coisa)
+
+# print(c.atributo_a)
+# print(c.atributo_b)
+# print(c.atributo_c)
+# c.metodo()
+
