@@ -31,9 +31,21 @@ class MyOpen:
         self._arquivo = open(self.caminho_arquivo, self.modo, encoding='utf8')
         return self._arquivo
     
-    def __exit__(self, class_exception, exception_, traceback):
+    def __exit__(self, class_exception, exception_, traceback_):
         print('Fechando arquivo')
         self._arquivo.close()
+        
+        # raise class_exception(*exception_.args).with_tracebak(traceback_)
+        
+        # print(class_exception)
+        # print(exception_)
+        # print(traceback_)
+        
+        # exception_.add_note('Minha nota')
+        
+        raise ConnectionError('Não deu para conectar')
+        
+        # return True #Tratei a execeção
         
 
 with MyOpen('Aulas/aula149.txt', 'w') as arquivo:
