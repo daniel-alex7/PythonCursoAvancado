@@ -27,9 +27,42 @@
 # class Foo:
 #     ...
 
+# part 1
+# Foo = type('Foo', (object,), {})
+# f = Foo()
 
-Foo = type('Foo', (object,), {})
-f = Foo()
+# print(type(f))
+# print(type(Foo))
 
-print(type(f))
-print(type(Foo))
+def meu_repr(self):
+    return f'{type(self).__name__}({self.__dict__})'
+
+class Meta(type):
+    def __new__(mcs, name, bases, dct):
+        print('METACLASS NEW')
+        cls = super().__new__(mcs, name, bases, dct)
+        cls.attr = 1234
+        cls.__repr__ = meu_repr
+        
+        if 'falar' not in cls.__dict__:
+            raise NotImplementedError('IMPLEMENTE FALAR')
+        
+        return cls
+
+class Pessoa(metaclass=Meta):
+    def __new__(cls, *args, **kwargs):
+        print('MEU NEW')
+        instancia = super().__new__(cls)
+        return instancia
+    
+    def __init__(self, nome):
+        print('MEU INIT')
+        self.nome = nome
+        
+    def falar(self):
+        print('FALANDO...')
+        
+p1 = Pessoa('Daniel')
+print(p1.attr)
+print(p1)
+        
