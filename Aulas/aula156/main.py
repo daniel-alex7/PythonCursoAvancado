@@ -1,6 +1,8 @@
 # import uma_linha
 # import varias_linha
-import documentado_funcao
+# import documentado_funcao
+import documentando_class
+
 
 # print(dir(uma_linha))
 # print(uma_linha.__doc__)
@@ -8,4 +10,4 @@ import documentado_funcao
 # print(uma_linha.__name__)
 
 
-help(documentado_funcao)
+help(documentando_class)
