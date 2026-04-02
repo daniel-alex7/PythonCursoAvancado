@@ -41,39 +41,61 @@ Banco autentica por um método.
 
 class Pessoa():
     def __init__(self, nome, idade):
-        self.nome = nome
-        self.idade = idade
-        
+        self._nome = nome
+        self._idade = idade
+
     @property
     def nome(self):
-        print('NOME')
-        input('Digite seu nome: ')
-        return self.nome
-    
+        return self._nome
+
     @property
     def idade(self):
-        print('IDADE')
-        input('Digite sua idade: ')
-        return self.idade
+        return self._idade
     
-class Conta():
-    def __init__(self, conta, agencia, numero_conta, saldo):
-        self.conta = conta
+from abc import ABC, abstractmethod
+
+class Conta(ABC):
+    def __init__(self, agencia, numero_conta, saldo):
         self.agencia = agencia
         self.numero_conta = numero_conta
         self.saldo = saldo
-        
-    def deposito():
-        print('colocou 100')
-        return 
-    
-        
-        
-        
 
-class Cliente(Pessoa, Conta):
+    def depositar(self, valor):
+        self.saldo += valor
+
+    @abstractmethod
+    def sacar(self, valor):
+        ...
+
+class ContaCorrente(Conta):
+    def __init__(self, agencia, numero_conta, saldo, limite):
+        super().__init__(agencia, numero_conta, saldo)
+        self.limite = limite
+
+    def sacar(self, valor):
+        ...
+            
+class ContaPoupanca(Conta):
+    ...
+            
+class Banco:
     def __init__(self):
-        self._contas = []
+        self.clientes = []
+        self.contas = []
+        self.agencias = []
+
+    def autenticar(self, cliente):
+        return (
+            cliente in self.clientes and
+            cliente.conta in self.contas and
+            cliente.conta.agencia in self.agencias
+        )
+
+
+class Cliente(Pessoa):
+    def __init__(self, nome, idade):
+        super().__init__(nome, idade)
+        self.conta = None
     
     def conta(self):
         for conta in self._contas:
@@ -81,8 +103,6 @@ class Cliente(Pessoa, Conta):
         print()
         
 
-        
-               
     
 class ContaCorrente(Conta):
     def __init__(self):
