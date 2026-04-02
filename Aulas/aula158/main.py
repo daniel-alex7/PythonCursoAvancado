@@ -20,13 +20,15 @@ Dicas:
 Criar classe Cliente que herda da classe Pessoa (Herança)
     Pessoa tem nome e idade (com getters)
     Cliente TEM conta (Agregação da classe ContaCorrente ou ContaPoupanca)
-    
 Criar classes ContaPoupanca e ContaCorrente que herdam de Conta
     ContaCorrente deve ter um limite extra
     Contas têm agência, número da conta e saldo
+    
     Contas devem ter método para depósito
     Conta (super classe) deve ter o método sacar abstrato (Abstração e
     polimorfismo - as subclasses que implementam o método sacar)
+    
+    
 Criar classe Banco para AGREGAR classes de clientes e de contas (Agregação)
 Banco será responsável autenticar o cliente e as contas da seguinte maneira:
     Banco tem contas e clentes (Agregação)
@@ -53,21 +55,41 @@ class Pessoa():
         print('IDADE')
         input('Digite sua idade: ')
         return self.idade
+    
+class Conta():
+    def __init__(self, conta, agencia, numero_conta, saldo):
+        self.conta = conta
+        self.agencia = agencia
+        self.numero_conta = numero_conta
+        self.saldo = saldo
+        
+    def deposito():
+        print('colocou 100')
+        return 
+    
+        
+        
+        
 
-class Cliente(Pessoa):
+class Cliente(Pessoa, Conta):
     def __init__(self):
         self._contas = []
     
     def conta(self):
         for conta in self._contas:
-            print(produto.nome, produto.preco)
+            print(conta.nome)
         print()
         
+
         
+               
     
-class ContaCorrente():
-    ...
+class ContaCorrente(Conta):
+    def __init__(self):
+        if self.conta == "Conta corrente":
+            print('Recebeu R$1.000,00 de limite')
+
         
-class ContaPoupanca():
+class ContaPoupanca(Conta):
     ...
         
