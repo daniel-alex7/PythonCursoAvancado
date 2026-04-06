@@ -39,77 +39,81 @@ Só será possível sacar se passar na autenticação do banco (descrita acima)
 Banco autentica por um método.
 """
 
-class Pessoa():
-    def __init__(self, nome, idade):
-        self._nome = nome
-        self._idade = idade
+# class Pessoa():
+#     def __init__(self, nome, idade):
+#         self._nome = nome
+#         self._idade = idade
 
-    @property
-    def nome(self):
-        return self._nome
+#     @property
+#     def nome(self):
+#         return self._nome
 
-    @property
-    def idade(self):
-        return self._idade
+#     @property
+#     def idade(self):
+#         return self._idade
     
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class Conta(ABC):
-    def __init__(self, agencia, numero_conta, saldo):
-        self.agencia = agencia
-        self.numero_conta = numero_conta
-        self.saldo = saldo
+# class Conta(ABC):
+#     def __init__(self, agencia, numero_conta, saldo):
+#         self.agencia = agencia
+#         self.numero_conta = numero_conta
+#         self.saldo = saldo
 
-    def depositar(self, valor):
-        self.saldo += valor
+#     def depositar(self, valor):
+#         self.saldo += valor
 
-    @abstractmethod
-    def sacar(self, valor):
-        ...
+#     @abstractmethod
+#     def sacar(self, valor):
+#         ...
 
-class ContaCorrente(Conta):
-    def __init__(self, agencia, numero_conta, saldo, limite):
-        super().__init__(agencia, numero_conta, saldo)
-        self.limite = limite
+# class ContaCorrente(Conta):
+#     def __init__(self, agencia, numero_conta, saldo, limite):
+#         super().__init__(agencia, numero_conta, saldo)
+#         self.limite = limite
 
-    def sacar(self, valor):
-        ...
+#     def sacar(self, valor):
+#         ...
             
-class ContaPoupanca(Conta):
-    ...
+# class ContaPoupanca(Conta):
+#     ...
             
-class Banco:
-    def __init__(self):
-        self.clientes = []
-        self.contas = []
-        self.agencias = []
+# class Banco:
+#     def __init__(self):
+#         self.clientes = []
+#         self.contas = []
+#         self.agencias = []
 
-    def autenticar(self, cliente):
-        return (
-            cliente in self.clientes and
-            cliente.conta in self.contas and
-            cliente.conta.agencia in self.agencias
-        )
+#     def autenticar(self, cliente):
+#         return (
+#             cliente in self.clientes and
+#             cliente.conta in self.contas and
+#             cliente.conta.agencia in self.agencias
+#         )
 
 
-class Cliente(Pessoa):
-    def __init__(self, nome, idade):
-        super().__init__(nome, idade)
-        self.conta = None
+# class Cliente(Pessoa):
+#     def __init__(self, nome, idade):
+#         super().__init__(nome, idade)
+#         self.conta = None
     
-    def conta(self):
-        for conta in self._contas:
-            print(conta.nome)
-        print()
+#     def conta(self):
+#         for conta in self._contas:
+#             print(conta.nome)
+#         print()
         
 
     
-class ContaCorrente(Conta):
-    def __init__(self):
-        if self.conta == "Conta corrente":
-            print('Recebeu R$1.000,00 de limite')
+# class ContaCorrente(Conta):
+#     def __init__(self):
+#         if self.conta == "Conta corrente":
+#             print('Recebeu R$1.000,00 de limite')
 
         
-class ContaPoupanca(Conta):
-    ...
+# class ContaPoupanca(Conta):
+#     ...
         
+        
+        
+########## Correção
+
