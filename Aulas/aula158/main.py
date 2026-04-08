@@ -39,57 +39,10 @@ Só será possível sacar se passar na autenticação do banco (descrita acima)
 Banco autentica por um método.
 """
 
-# class Pessoa():
-#     def __init__(self, nome, idade):
-#         self._nome = nome
-#         self._idade = idade
 
-#     @property
-#     def nome(self):
-#         return self._nome
-
-#     @property
-#     def idade(self):
-#         return self._idade
     
 # from abc import ABC, abstractmethod
 
-# class Conta(ABC):
-#     def __init__(self, agencia, numero_conta, saldo):
-#         self.agencia = agencia
-#         self.numero_conta = numero_conta
-#         self.saldo = saldo
-
-#     def depositar(self, valor):
-#         self.saldo += valor
-
-#     @abstractmethod
-#     def sacar(self, valor):
-#         ...
-
-# class ContaCorrente(Conta):
-#     def __init__(self, agencia, numero_conta, saldo, limite):
-#         super().__init__(agencia, numero_conta, saldo)
-#         self.limite = limite
-
-#     def sacar(self, valor):
-#         ...
-            
-# class ContaPoupanca(Conta):
-#     ...
-            
-# class Banco:
-#     def __init__(self):
-#         self.clientes = []
-#         self.contas = []
-#         self.agencias = []
-
-#     def autenticar(self, cliente):
-#         return (
-#             cliente in self.clientes and
-#             cliente.conta in self.contas and
-#             cliente.conta.agencia in self.agencias
-#         )
 
 
 # class Cliente(Pessoa):
