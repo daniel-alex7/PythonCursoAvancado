@@ -33,3 +33,6 @@ class Pessoa:
     @idade.setter
     def idade(self, idade: int):
         self._idade = idade
+# TESTE DE COMMIT NO GIT 
+# TESTE 2
+#  TESTE 3
