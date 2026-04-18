@@ -111,21 +111,41 @@
     
 # part 5
 
-from dataclasses import dataclass, asdict, astuple
+# from dataclasses import dataclass, asdict, astuple
 
-@dataclass(repr=False)
-class Pessoa:
-    nome: str
-    sobrenome: str
+# @dataclass(repr=False)
+# class Pessoa:
+#     nome: str
+#     sobrenome: str
     
+
+# if __name__ == '__main__':
+#     p1 = Pessoa('Daniel', 'Robson')
+#     print(asdict(p1).keys())
+#     print(asdict(p1).values())
+#     print(asdict(p1).items())
+#     print(astuple(p1)[0])
+
+
+# part 6
+#  VALORES PADRAO DEVEM SER IMUTAVEIS
+
+
+from dataclasses import dataclass, field, fields
+
+@dataclass
+class Pessoa:
+    nome: str = field(
+        default='Missing', repr= False
+    )
+    sobrenome: str = 'Not sent'
+    idade: int = 204
+    enderecos: list[str] = field(default_factory=list) 
 
 if __name__ == '__main__':
-    p1 = Pessoa('Daniel', 'Robson')
-    print(asdict(p1).keys())
-    print(asdict(p1).values())
-    print(asdict(p1).items())
-    print(astuple(p1)[0])
-    
+    p1 = Pessoa()
+    # print(fields(p1))
+    print(p1)
 
     
     
