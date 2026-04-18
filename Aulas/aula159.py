@@ -34,29 +34,81 @@ from dataclasses import dataclass
 #     p1.nome_completo = 'Maria Helena'
 #     print(p1)
 #     print(p1.nome_completo)
+
+
+
+
 #     # part 2
 
-@dataclass
+# @dataclass
+# class Pessoa:
+#     nome: str
+#     sobrenome: str
+
+#     @property
+#     def nome_completo(self):
+#         return f'{self.nome} {self.sobrenome}'
+
+#     @nome_completo.setter
+#     def nome_completo(self, valor):
+#         nome, *sobrenome = valor.split()
+#         self.nome = nome
+#         self.sobrenome = ' '.join(sobrenome)
+
+
+# if __name__ == '__main__':
+#     p1 = Pessoa('Luiz', 'Otávio')
+#     p1.nome_completo = 'Maria Helena'
+#     print(p1)
+#     print(p1.nome_completo)
+    
+
+#  part 3 _init_ e __post_initi__  
+    
+# @dataclass(init=False)
+# class Pessoa:
+#     nome: str
+#     sobrenome: str
+    
+#     def __init__(self, nome, sobrenome):
+#         self.nome = nome
+#         self.sobrenome = sobrenome
+#         self.nome_completo = f'{self.nome} {self.sobrenome}'
+    
+#     def __post_init__(self):
+#         print('Post Init')
+#         self.nome_completo = f'{self.nome} {self.sobrenome}'
+
+#     # @property
+#     # def nome_completo(self):
+#     #     return f'{self.nome} {self.sobrenome}'
+
+#     # @nome_completo.setter
+#     # def nome_completo(self, valor):
+#     #     nome, *sobrenome = valor.split()
+#     #     self.nome = nome
+#     #     self.sobrenome = ' '.join(sobrenome)
+
+
+# if __name__ == '__main__':
+#     p1 = Pessoa('Daniel', 'Robson')
+#     print(p1)
+#     print(p1.nome_completo)
+
+
+# part 4
+
+@dataclass(repr=False, order= True)
 class Pessoa:
     nome: str
     sobrenome: str
-
-    @property
-    def nome_completo(self):
-        return f'{self.nome} {self.sobrenome}'
-
-    @nome_completo.setter
-    def nome_completo(self, valor):
-        nome, *sobrenome = valor.split()
-        self.nome = nome
-        self.sobrenome = ' '.join(sobrenome)
-
+    
 
 if __name__ == '__main__':
-    p1 = Pessoa('Luiz', 'Otávio')
-    p1.nome_completo = 'Maria Helena'
-    print(p1)
-    print(p1.nome_completo)
+    lista = [Pessoa('A', 'B'), Pessoa('F', 'SZ'), Pessoa('Q', 'S'),]
+    ordenar = sorted(lista, reverse=True)
+    print(ordenar)
+
     
     
     
