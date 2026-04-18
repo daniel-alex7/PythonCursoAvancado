@@ -98,15 +98,15 @@ from dataclasses import dataclass
 
 # part 4
 
-@dataclass(repr=False, order= True)
+@dataclass(repr=False)
 class Pessoa:
     nome: str
     sobrenome: str
     
 
 if __name__ == '__main__':
-    lista = [Pessoa('A', 'B'), Pessoa('F', 'SZ'), Pessoa('Q', 'S'),]
-    ordenar = sorted(lista, reverse=True)
+    lista = [Pessoa('A', 'Z'), Pessoa('B', 'Y'), Pessoa('C', 'X'),]
+    ordenar = sorted(lista, reverse=True, key=lambda p: p.nome)
     print(ordenar)
 
     
