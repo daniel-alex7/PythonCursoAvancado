@@ -9,3 +9,27 @@
 # from collections import namedtuple
 
 
+# from collections import namedtuple
+
+# Carta = namedtuple('Carta', ['valor', 'naipe'],
+#                    defaults=['VALOR','NAIPE'])
+from typing import NamedTuple
+
+class Carta(NamedTuple):
+    valor: str = 'Valor'
+    naie: str = 'Naipe'
+
+as_espadas = Carta('A')
+
+print(as_espadas._asdict())
+
+# print(as_espadas)
+# print(as_espadas.naipe)
+# print(as_espadas.valor)
+
+# print()
+# print(as_espadas._fields)
+# print(as_espadas._field_defaults)
+
+# for valor in as_espadas:
+#     print(valor)
