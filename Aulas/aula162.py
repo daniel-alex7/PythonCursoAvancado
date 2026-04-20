@@ -22,5 +22,9 @@
 # print(data)
 
 
+#  part 2
 
+# data = datetime.now()
+# print(data.timestamp())  # Isso está na base de dados
+# print(datetime.fromtimestamp(1776726108.490952))
 
